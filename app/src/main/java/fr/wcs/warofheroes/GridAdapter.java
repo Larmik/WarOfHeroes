@@ -6,12 +6,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+
+import com.bumptech.glide.Glide;
+
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 
-
-/**
- * Created by wilder on 05/04/18.
- */
 
 public class GridAdapter extends ArrayAdapter<HeroesModel> {
 
@@ -29,10 +30,7 @@ public class GridAdapter extends ArrayAdapter<HeroesModel> {
         }
 
         ImageView heroImage = convertView.findViewById(R.id.item_img);
-
-
-
-        heroImage.setImageResource(hero.getImage());
+        Glide.with(parent).load(hero.getImage()).into(heroImage);
 
         return convertView;
 
