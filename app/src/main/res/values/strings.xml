@@ -2,4 +2,6 @@
     <string name="app_name">War of Heroes</string>
     <string name="entrainement">Entrainement</string>
     <string name="combat_1vs1">Combat 1vs1</string>
+    <string name="war_of_heroes">War of Heroes</string>
+    <string name="splash">War of Heroes</string>
 </resources>
