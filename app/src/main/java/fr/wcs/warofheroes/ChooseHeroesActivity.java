@@ -13,7 +13,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+
 import android.widget.Button;
+
 import android.widget.GridView;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
@@ -41,6 +43,7 @@ import java.util.List;
 import java.util.Vector;
 
 public class ChooseHeroesActivity extends FragmentActivity {
+
     public static final String EXTRA_PARCEL_HERO1 = "EXTRA_PARCEL_HERO1";
     public static final String EXTRA_PARCEL_HERO2 = "EXTRA_PARCEL_HERO2";
 
@@ -48,6 +51,10 @@ public class ChooseHeroesActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_heroes);
+        Intent gotoSplashVs = new Intent(ChooseHeroesActivity.this, VsActivity.class);
+        ChooseHeroesActivity.this.startActivity(gotoSplashVs);
+
+
         final ArrayList<HeroesModel> heroList = new ArrayList<>();
         final ImageView imgHero = findViewById(R.id.img_hero);
         final TextView intelligence = findViewById(R.id.intelligence_value);
@@ -69,6 +76,7 @@ public class ChooseHeroesActivity extends FragmentActivity {
         final GridView gridHero = findViewById(R.id.grid_hero);
         final Button btnGo = findViewById(R.id.btn_go);
         final Intent intent = new Intent(ChooseHeroesActivity.this, ArenaActivity.class);
+
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         String url = "https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json";
 
@@ -82,6 +90,7 @@ public class ChooseHeroesActivity extends FragmentActivity {
                         try {
 
                             for (int i = 0; i < 30; i++) {
+
                                 JSONObject heroStats = response.getJSONObject(i);
 
                                 JSONObject powerStats = heroStats.getJSONObject("powerstats");
@@ -172,7 +181,6 @@ public class ChooseHeroesActivity extends FragmentActivity {
                 name.setText(heroList.get(i).getName());
                 desc.setText(heroList.get(i).getDescription());
                 Glide.with(ChooseHeroesActivity.this).load(heroList.get(i).getImage()).into(imgHero);
-
                 btnGo.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -237,6 +245,7 @@ public class ChooseHeroesActivity extends FragmentActivity {
                                 });
                             }
                         });
+
 
                     }
                 });
