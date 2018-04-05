@@ -14,20 +14,12 @@
         tools:layout_editor_absoluteY="0dp">
 
         <ImageView
-            android:id="@+id/splashscreen"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:layout_gravity="center"
-            android:src="@drawable/splash" />
-
-        <ImageView
             android:id="@+id/imageView4"
             android:layout_width="121dp"
             android:layout_height="108dp"
-            android:layout_above="@+id/textView"
-            android:layout_marginBottom="61dp"
-            android:layout_marginEnd="17dp"
-            android:layout_toStartOf="@+id/textView"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/imageView7"
+            android:layout_marginStart="28dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:srcCompat="@mipmap/ic_launcher_round" />
@@ -37,36 +29,43 @@
             android:layout_width="121dp"
             android:layout_height="107dp"
             android:layout_alignParentEnd="true"
-            android:layout_below="@+id/textView"
-            android:layout_marginEnd="38dp"
-            android:layout_marginTop="47dp"
+            android:layout_alignTop="@+id/imageView7"
+            android:layout_marginEnd="36dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@mipmap/ic_launcher_round" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/vs5" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
+            android:layout_alignBaseline="@+id/textView2"
+            android:layout_alignBottom="@+id/textView2"
+            android:layout_alignEnd="@+id/imageView3"
+            android:layout_marginEnd="18dp"
+            android:text="Hero2"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/imageView4"
+            android:layout_below="@+id/imageView4"
             android:layout_marginEnd="19dp"
-            android:layout_toStartOf="@+id/imageView3"
-            android:text="Vs"
+            android:layout_marginTop="13dp"
             android:textSize="30sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.462"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.492" />
+            tools:text="Hero1" />
 
     </RelativeLayout>
-
-
-
-
-
-
 
 
 </android.support.constraint.ConstraintLayout>

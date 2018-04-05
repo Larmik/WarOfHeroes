@@ -1,14 +1,18 @@
 package fr.wcs.warofheroes;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.media.Image;
+import android.os.Parcelable;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
@@ -36,14 +40,17 @@ import java.util.List;
 import java.util.Vector;
 
 public class ChooseHeroesActivity extends FragmentActivity {
-
-    private PagerAdapter scrollAdapter;
-
+public static final String EXTRA_PARCEL_HERO = "EXTRA_PARCEL_HERO";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_heroes);
+        Intent gotoSplashVs = new Intent(ChooseHeroesActivity.this, VsActivity.class);
+        ChooseHeroesActivity.this.startActivity(gotoSplashVs);
+
+
         final ArrayList<HeroesModel> heroList = new ArrayList<>();
+        final ImageView imgHero = findViewById(R.id.img_hero);
         final TextView intelligence = findViewById(R.id.intelligence_value);
         final TextView strength = findViewById(R.id.strength_value);
         final TextView speed = findViewById(R.id.speed_value);
@@ -52,6 +59,7 @@ public class ChooseHeroesActivity extends FragmentActivity {
         final TextView combat = findViewById(R.id.combat_value);
         final TextView name = findViewById(R.id.name_hero);
         final TextView desc = findViewById(R.id.desc_hero);
+        final GridView gridHero = findViewById(R.id.grid_hero);
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         String url = "https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json";
 
@@ -65,7 +73,7 @@ public class ChooseHeroesActivity extends FragmentActivity {
                         // TODO : traiter la réponse
                         try {
 
-                            for(int i = 0; i < 24; i++) {
+                            for(int i = 0; i < response.length(); i++) {
                                 JSONObject heroStats = response.getJSONObject(i);
 
                                 JSONObject powerStats = heroStats.getJSONObject("powerstats");
@@ -100,7 +108,7 @@ public class ChooseHeroesActivity extends FragmentActivity {
 
 
                             final GridAdapter adapter = new GridAdapter(ChooseHeroesActivity.this, heroList);
-                            GridView gridHero = findViewById(R.id.grid_hero);
+                            ;
 
                             gridHero.setAdapter(adapter);
 
@@ -123,6 +131,28 @@ public class ChooseHeroesActivity extends FragmentActivity {
         );
 
         requestQueue.add(jsonObjectRequest);
+        gridHero.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                Parcelable hero = new HeroesModel(heroList.get(i).getName(), heroList.get(i).getIntelligence(), heroList.get(i).getStrength(),
+                        heroList.get(i).getSpeed(), heroList.get(i).getDurability(), heroList.get(i).getPower(),heroList.get(i).getCombat(),
+                        heroList.get(i).getDescription(), heroList.get(i).getImage());
+                Intent intent = new Intent(ChooseHeroesActivity.this, ArenaActivity.class);
+                intent.putExtra(EXTRA_PARCEL_HERO, hero);
+                intelligence.setText(String.valueOf(heroList.get(i).getIntelligence()));
+                strength.setText(String.valueOf(heroList.get(i).getStrength()));
+                speed.setText(String.valueOf(heroList.get(i).getSpeed()));
+                durability.setText(String.valueOf(heroList.get(i).getDurability()));
+                power.setText(String.valueOf(heroList.get(i).getPower()));
+                combat.setText(String.valueOf(heroList.get(i).getCombat()));
+                name.setText(heroList.get(i).getName());
+                desc.setText(heroList.get(i).getDescription());
+                Glide.with(ChooseHeroesActivity.this).load(heroList.get(i).getImage()).into(imgHero);
+
+            }
+        });
+
 
 
 

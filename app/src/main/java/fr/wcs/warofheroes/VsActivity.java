@@ -11,6 +11,7 @@ public class VsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vs);
+        Intent recupChoose = getIntent();
         final int SPLASH_DISPLAY_LENGTH = 2500;
 
         new Handler().postDelayed(new Runnable(){
