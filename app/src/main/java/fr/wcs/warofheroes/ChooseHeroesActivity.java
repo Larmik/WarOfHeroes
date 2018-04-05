@@ -65,7 +65,7 @@ public class ChooseHeroesActivity extends FragmentActivity {
                         // TODO : traiter la réponse
                         try {
 
-                            for(int i = 0; i < 11; i++) {
+                            for(int i = 0; i < 24; i++) {
                                 JSONObject heroStats = response.getJSONObject(i);
 
                                 JSONObject powerStats = heroStats.getJSONObject("powerstats");
@@ -103,16 +103,6 @@ public class ChooseHeroesActivity extends FragmentActivity {
                             GridView gridHero = findViewById(R.id.grid_hero);
 
                             gridHero.setAdapter(adapter);
-
-
-
-
-
-
-
-
-
-
 
 
                             } catch (JSONException e) {
