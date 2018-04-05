@@ -12,7 +12,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
-        final int SPLASH_DISPLAY_LENGTH = 6500;
+        final int SPLASH_DISPLAY_LENGTH = 2500;
 
             new Handler().postDelayed(new Runnable(){
                 @Override

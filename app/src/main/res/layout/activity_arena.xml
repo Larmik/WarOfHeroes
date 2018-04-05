@@ -4,5 +4,5 @@
     android:layout_height="match_parent"
     android:background="@drawable/joel_boucquemont_pestilence_arena">
 
-
 </android.support.constraint.ConstraintLayout>
+
