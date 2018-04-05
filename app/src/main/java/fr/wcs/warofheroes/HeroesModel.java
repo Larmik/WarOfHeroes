@@ -1,6 +1,5 @@
 package fr.wcs.warofheroes;
 
-
 import android.os.Parcel;
 import android.os.Parcelable;
 
