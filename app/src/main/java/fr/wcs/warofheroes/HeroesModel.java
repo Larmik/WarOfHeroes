@@ -38,34 +38,42 @@ public class HeroesModel implements Parcelable {
     };
 
     public String getName() {
+
         return name;
     }
 
     public void setName(String name) {
+
         this.name = name;
     }
 
     public int[] getStats() {
+
         return stats;
     }
 
     public void setStats(int[] stats) {
+
         this.stats = stats;
     }
 
     public String getDescription() {
+
         return description;
     }
 
     public void setDescription(String description) {
+
         this.description = description;
     }
 
     public int getImage() {
+
         return image;
     }
 
     public void setImage(int image) {
+
         this.image = image;
     }
 
