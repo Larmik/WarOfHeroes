@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="hero_list">
+        <item >Intelligence</item>
+        <item>Strength</item>
+        <item>Speed</item>
+        <item>Durability</item>
+        <item>Power</item>
+        <item>Combat</item>
+
+    </array>
+</resources>
