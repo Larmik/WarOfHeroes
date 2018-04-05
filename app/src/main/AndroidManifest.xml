@@ -19,10 +19,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity android:name=".ArenaActivity"
             android:screenOrientation="landscape">
 
         </activity>
+=======
+        <activity android:name=".ArenaActivity"></activity>
+>>>>>>> d5ebd690f0d4450acc8ae6c7b6583a78d2bd8244
     </application>
 
 </manifest>

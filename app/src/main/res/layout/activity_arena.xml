@@ -4,7 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     android:background="@drawable/joel_boucquemont_pestilence_arena"
+=======
+>>>>>>> d5ebd690f0d4450acc8ae6c7b6583a78d2bd8244
     tools:context="fr.wcs.warofheroes.ArenaActivity">
 
 </android.support.constraint.ConstraintLayout>
