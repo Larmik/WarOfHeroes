@@ -22,8 +22,13 @@
         </activity>
         <activity
             android:name=".ArenaActivity"
-            android:screenOrientation="landscape"></activity>
-        <activity android:name=".ChooseHeroesActivity"></activity>
+            android:screenOrientation="landscape">
+
+        </activity>
+        <activity android:name=".ChooseHeroesActivity"
+            android:screenOrientation="landscape">
+
+        </activity>
     </application>
 
 </manifest>

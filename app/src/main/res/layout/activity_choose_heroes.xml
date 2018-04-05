@@ -6,4 +6,48 @@
     android:layout_height="match_parent"
     tools:context="fr.wcs.warofheroes.ChooseHeroesActivity">
 
+
+    <GridView
+        android:id="@+id/grid_hero"
+        android:layout_width="0dp"
+        android:layout_height="172dp"
+        android:numColumns="auto_fit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grid_hero" />
+
+    <ListView
+        android:id="@+id/stats_list"
+        android:layout_width="264dp"
+        android:layout_height="171dp"
+        android:entries="@array/hero_list"
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="180dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="230dp"
+        android:layout_height="177dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/stats_list"
+        app:layout_constraintTop_toBottomOf="@+id/grid_hero" />
 </android.support.constraint.ConstraintLayout>

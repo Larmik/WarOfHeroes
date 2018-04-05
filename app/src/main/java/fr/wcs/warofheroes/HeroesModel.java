@@ -1,7 +1,11 @@
 package fr.wcs.warofheroes;
 
+import android.app.Fragment;
+import android.app.FragmentManager;
 import android.os.Parcel;
 import android.os.Parcelable;
+
+import java.util.List;
 
 public class HeroesModel implements Parcelable {
 
@@ -9,6 +13,7 @@ public class HeroesModel implements Parcelable {
     private int[] stats;
     private String description;
     private  int image;
+
 
     public HeroesModel(String name, int[] stats, String description, int image) {
         this.name = name;
