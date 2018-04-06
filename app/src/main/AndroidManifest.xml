@@ -27,13 +27,15 @@
         <activity
             android:name=".ChooseHeroesActivity"
             android:screenOrientation="landscape" />
+
+        <activity android:name=".ResumeFightActivity"
+                  android:screenOrientation="landscape"></activity>
         <activity
             android:name=".MainActivity"
             android:screenOrientation="landscape"></activity>
        
         <activity android:name=".VsActivity"
             android:screenOrientation="landscape"></activity>
-
     </application>
 
 </manifest>
