@@ -22,11 +22,12 @@
         </activity>
         <activity
             android:name=".ArenaActivity"
-            android:screenOrientation="landscape"></activity>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".ChooseHeroesActivity"
-            android:screenOrientation="landscape"></activity>
-        <activity android:name=".VsActivity"></activity>
+            android:screenOrientation="landscape" />
+        <activity android:name=".VsActivity" />
+        <activity android:name=".ResumeFightActivity"></activity>
     </application>
 
 </manifest>
