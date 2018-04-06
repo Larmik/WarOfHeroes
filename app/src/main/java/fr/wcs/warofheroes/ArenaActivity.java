@@ -8,6 +8,7 @@ import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -19,9 +20,6 @@ import static fr.wcs.warofheroes.ChooseHeroesActivity.EXTRA_PARCEL_HERO2;
 
 public class ArenaActivity extends AppCompatActivity {
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +27,11 @@ public class ArenaActivity extends AppCompatActivity {
 
         HeroesModel hero1Parcel = getIntent().getParcelableExtra(EXTRA_PARCEL_HERO1);
         HeroesModel hero2Parcel = getIntent().getParcelableExtra(EXTRA_PARCEL_HERO2);
+
+        final ProgressBar health1 = findViewById(R.id.progressBarHero1);
+        final ProgressBar health2 = findViewById(R.id.progressBarHero3);
+        final ProgressBar manaHero1 = findViewById(R.id.progressBarHero2);
+        final ProgressBar manaHero2 = findViewById(R.id.progressBarHero4);
 
         int attackValue = new Random().nextInt((5 - 2)+1) +2;
         final HeroesModel hero1 = new HeroesModel(100, attackValue, 0);
@@ -47,8 +50,6 @@ public class ArenaActivity extends AppCompatActivity {
         final Button heal2 = findViewById(R.id.button_heal_2);
         Glide.with(this).load(hero1Parcel.getImage()).into(imgHero1);
         Glide.with(this).load(hero2Parcel.getImage()).into(imgHero2);
-
-
 
         attack1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,6 +107,14 @@ public class ArenaActivity extends AppCompatActivity {
                 attack2.setVisibility(View.VISIBLE);
                 spell2.setVisibility(View.VISIBLE);
                 heal2.setVisibility(View.VISIBLE);
+
+                hero2.setLife(hero2.getLife() - attackValue);
+                health2.setSecondaryProgress(100);
+                health2.setProgress(hero2.getLife());
+
+                hero1.setMana(hero1.getMana() + mana);
+                manaHero1.setSecondaryProgress(50);
+                manaHero1.setProgress(hero1.getMana());
             }
         });
 
@@ -166,6 +175,14 @@ public class ArenaActivity extends AppCompatActivity {
                 attack2.setVisibility(View.VISIBLE);
                 spell2.setVisibility(View.VISIBLE);
                 heal2.setVisibility(View.VISIBLE);
+
+                hero2.setLife(hero2.getLife() - spellHealValue);
+                health2.setSecondaryProgress(100);
+                health2.setProgress(hero2.getLife());
+
+                hero1.setMana(hero1.getMana() - 50);
+                manaHero1.setSecondaryProgress(50);
+                manaHero1.setProgress(hero1.getMana());
             }
         });
 
@@ -207,6 +224,14 @@ public class ArenaActivity extends AppCompatActivity {
                 attack2.setVisibility(View.VISIBLE);
                 spell2.setVisibility(View.VISIBLE);
                 heal2.setVisibility(View.VISIBLE);
+
+                hero1.setLife(hero1.getLife() + spellHealValue);
+                health1.setSecondaryProgress(100);
+                health1.setProgress(hero1.getLife());
+
+                hero1.setMana(hero1.getMana() - 50);
+                manaHero1.setSecondaryProgress(50);
+                manaHero1.setProgress(hero1.getMana());
             }
         });
 
@@ -266,6 +291,14 @@ public class ArenaActivity extends AppCompatActivity {
                 attack2.setVisibility(View.INVISIBLE);
                 spell2.setVisibility(View.INVISIBLE);
                 heal2.setVisibility(View.INVISIBLE);
+
+                hero1.setLife(hero1.getLife() - attackValue);
+                health1.setSecondaryProgress(100);
+                health1.setProgress(hero1.getLife());
+
+                hero2.setMana(hero2.getMana() + mana);
+                //manaHero2.setSecondaryProgress(50);
+                manaHero2.setProgress(hero2.getMana()*2);
             }
         });
 
@@ -326,6 +359,14 @@ public class ArenaActivity extends AppCompatActivity {
                 attack2.setVisibility(View.INVISIBLE);
                 spell2.setVisibility(View.INVISIBLE);
                 heal2.setVisibility(View.INVISIBLE);
+
+                hero1.setLife(hero1.getLife() - spellHealValue);
+                health1.setSecondaryProgress(100);
+                health1.setProgress(hero1.getLife());
+
+                hero2.setMana(hero2.getMana() - 50);
+                manaHero2.setSecondaryProgress(100);
+                manaHero2.setProgress(hero2.getMana());
             }
         });
 
@@ -367,12 +408,16 @@ public class ArenaActivity extends AppCompatActivity {
                 attack2.setVisibility(View.INVISIBLE);
                 spell2.setVisibility(View.INVISIBLE);
                 heal2.setVisibility(View.INVISIBLE);
+
+                hero2.setLife(hero2.getLife() - spellHealValue);
+                health2.setSecondaryProgress(100);
+                health2.setProgress(hero2.getLife());
+
+                hero2.setMana(hero2.getMana() - 50);
+                manaHero2.setSecondaryProgress(50);
+                manaHero2.setProgress(hero2.getMana());
             }
         });
-
-
-
-
     }
 
     public ArenaActivity(){
