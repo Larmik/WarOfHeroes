@@ -1,27 +1,50 @@
 package fr.wcs.warofheroes;
 
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.graphics.drawable.Drawable;
 import android.os.Parcel;
 import android.os.Parcelable;
+
+import java.util.List;
 
 public class HeroesModel implements Parcelable {
 
     private String name;
-    private int[] stats;
+    private int intelligence;
+    private int strength;
+    private int speed;
+    private int durability;
+    private int power;
+    private int combat;
     private String description;
-    private  int image;
+    private String image;
 
-    public HeroesModel(String name, int[] stats, String description, int image) {
+
+    public HeroesModel(String name, int intelligence, int strength, int speed, int durability,
+                       int power, int combat, String description, String image) {
         this.name = name;
-        this.stats = stats;
+        this.intelligence = intelligence;
+        this.strength = strength;
+        this.speed = speed;
+        this.durability = durability;
+        this.power = power;
+        this.combat = combat;
         this.description = description;
         this.image = image;
+
     }
 
     protected HeroesModel(Parcel in) {
         name = in.readString();
-        stats = in.createIntArray();
+        intelligence = in.readInt();
+        strength = in.readInt();
+        speed = in.readInt();
+        durability = in.readInt();
+        power = in.readInt();
+        combat = in.readInt();
         description = in.readString();
-        image = in.readInt();
+        image = in.readString();
     }
 
     public static final Creator<HeroesModel> CREATOR = new Creator<HeroesModel>() {
@@ -44,12 +67,52 @@ public class HeroesModel implements Parcelable {
         this.name = name;
     }
 
-    public int[] getStats() {
-        return stats;
+    public int getIntelligence() {
+        return intelligence;
     }
 
-    public void setStats(int[] stats) {
-        this.stats = stats;
+    public void setIntelligence(int intelligence) {
+        this.intelligence = intelligence;
+    }
+
+    public int getStrength() {
+        return strength;
+    }
+
+    public void setStrength(int strength) {
+        this.strength = strength;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
+    public int getDurability() {
+        return durability;
+    }
+
+    public void setDurability(int durability) {
+        this.durability = durability;
+    }
+
+    public int getPower() {
+        return power;
+    }
+
+    public void setPower(int power) {
+        this.power = power;
+    }
+
+    public int getCombat() {
+        return combat;
+    }
+
+    public void setCombat(int combat) {
+        this.combat = combat;
     }
 
     public String getDescription() {
@@ -60,11 +123,11 @@ public class HeroesModel implements Parcelable {
         this.description = description;
     }
 
-    public int getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(int image) {
+    public void setImage(String image) {
         this.image = image;
     }
 
@@ -76,8 +139,15 @@ public class HeroesModel implements Parcelable {
     @Override
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeString(name);
-        parcel.writeIntArray(stats);
+        parcel.writeInt(intelligence);
+        parcel.writeInt(strength);
+        parcel.writeInt(speed);
+        parcel.writeInt(durability);
+        parcel.writeInt(power);
+        parcel.writeInt(combat);
         parcel.writeString(description);
-        parcel.writeInt(image);
+        parcel.writeString(image);
     }
 }
+
+

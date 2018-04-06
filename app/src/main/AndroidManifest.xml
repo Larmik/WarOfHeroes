@@ -21,6 +21,7 @@
             </intent-filter>
         </activity>
         <activity
+
             android:name=".ArenaActivity"
             android:screenOrientation="landscape" />
         <activity
@@ -28,7 +29,11 @@
             android:screenOrientation="landscape" />
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="landscape" />
+            android:screenOrientation="landscape"></activity>
+       
+        <activity android:name=".VsActivity"
+            android:screenOrientation="landscape"></activity>
+
     </application>
 
 </manifest>
