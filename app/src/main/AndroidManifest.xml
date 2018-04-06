@@ -26,7 +26,8 @@
         <activity
             android:name=".ChooseHeroesActivity"
             android:screenOrientation="landscape"></activity>
-        <activity android:name=".VsActivity"></activity>
+        <activity android:name=".VsActivity"
+            android:screenOrientation="landscape"></activity>
     </application>
 
 </manifest>

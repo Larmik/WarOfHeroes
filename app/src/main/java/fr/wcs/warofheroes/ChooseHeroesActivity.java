@@ -1,46 +1,30 @@
 package fr.wcs.warofheroes;
 
-import android.app.Fragment;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
-import android.media.Image;
+import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-
 import android.widget.Button;
-
 import android.widget.GridView;
-import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.RequestBuilder;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.lang.annotation.Target;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Vector;
 
 public class ChooseHeroesActivity extends FragmentActivity {
 
@@ -51,9 +35,7 @@ public class ChooseHeroesActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_heroes);
-        Intent gotoSplashVs = new Intent(ChooseHeroesActivity.this, VsActivity.class);
-        ChooseHeroesActivity.this.startActivity(gotoSplashVs);
-
+        final Intent gotoSplashVs = new Intent(ChooseHeroesActivity.this, VsActivity.class);
 
         final ArrayList<HeroesModel> heroList = new ArrayList<>();
         final ImageView imgHero = findViewById(R.id.img_hero);
@@ -75,7 +57,6 @@ public class ChooseHeroesActivity extends FragmentActivity {
         final TextView player = findViewById(R.id.player);
         final GridView gridHero = findViewById(R.id.grid_hero);
         final Button btnGo = findViewById(R.id.btn_go);
-        final Intent intent = new Intent(ChooseHeroesActivity.this, ArenaActivity.class);
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         String url = "https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json";
@@ -168,10 +149,9 @@ public class ChooseHeroesActivity extends FragmentActivity {
                 name.setVisibility(View.VISIBLE);
 
 
-                Parcelable hero1 = new HeroesModel(heroList.get(i).getName(), heroList.get(i).getIntelligence(), heroList.get(i).getStrength(),
+                final Parcelable hero1 = new HeroesModel(heroList.get(i).getName(), heroList.get(i).getIntelligence(), heroList.get(i).getStrength(),
                         heroList.get(i).getSpeed(), heroList.get(i).getDurability(), heroList.get(i).getPower(), heroList.get(i).getCombat(),
                         heroList.get(i).getDescription(), heroList.get(i).getImage());
-                intent.putExtra(EXTRA_PARCEL_HERO1, hero1);
                 intelligence.setText(String.valueOf(heroList.get(i).getIntelligence()));
                 strength.setText(String.valueOf(heroList.get(i).getStrength()));
                 speed.setText(String.valueOf(heroList.get(i).getSpeed()));
@@ -223,10 +203,9 @@ public class ChooseHeroesActivity extends FragmentActivity {
                                 imgHero.setVisibility(View.VISIBLE);
                                 name.setVisibility(View.VISIBLE);
 
-                                Parcelable hero2 = new HeroesModel(heroList.get(i).getName(), heroList.get(i).getIntelligence(), heroList.get(i).getStrength(),
+                                final Parcelable hero2 = new HeroesModel(heroList.get(i).getName(), heroList.get(i).getIntelligence(), heroList.get(i).getStrength(),
                                         heroList.get(i).getSpeed(), heroList.get(i).getDurability(), heroList.get(i).getPower(), heroList.get(i).getCombat(),
                                         heroList.get(i).getDescription(), heroList.get(i).getImage());
-                                intent.putExtra(EXTRA_PARCEL_HERO2, hero2);
                                 intelligence.setText(String.valueOf(heroList.get(i).getIntelligence()));
                                 strength.setText(String.valueOf(heroList.get(i).getStrength()));
                                 speed.setText(String.valueOf(heroList.get(i).getSpeed()));
@@ -240,7 +219,12 @@ public class ChooseHeroesActivity extends FragmentActivity {
                                 btnGo.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View view) {
-                                        ChooseHeroesActivity.this.startActivity(intent);
+                                        Intent intent = new Intent(ChooseHeroesActivity.this, ArenaActivity.class);
+                                        gotoSplashVs.putExtra(EXTRA_PARCEL_HERO1, hero1);
+                                        gotoSplashVs.putExtra(EXTRA_PARCEL_HERO2, hero2);
+                                        intent.putExtra(EXTRA_PARCEL_HERO1, hero1);
+                                        intent.putExtra(EXTRA_PARCEL_HERO2, hero2);
+                                        ChooseHeroesActivity.this.startActivity(gotoSplashVs);
                                     }
                                 });
                             }
