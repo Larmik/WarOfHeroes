@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fr.wcs.warofheroes.ResumeFightActivity">
+
+    <TextView
+        android:id="@+id/heal_loss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/permanent_marker"
+        android:text="17"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/damages_from_win" />
+
+    <TextView
+        android:id="@+id/damages_to_win"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="21dp"
+        android:fontFamily="@font/permanent_marker"
+        android:text="17"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loss_name" />
+
+    <TextView
+        android:id="@+id/damages_from_win"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/permanent_marker"
+        android:text="17"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/damages_to_win" />
+
+    <TextView
+        android:id="@+id/Texts"
+        android:layout_width="132dp"
+        android:layout_height="19dp"
+        android:layout_marginEnd="78dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/permanent_marker"
+        android:text="Soins"
+        app:layout_constraintEnd_toStartOf="@+id/heal_loss"
+        app:layout_constraintTop_toBottomOf="@+id/Text" />
+
+    <TextView
+        android:id="@+id/Text"
+        android:layout_width="132dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="72dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/permanent_marker"
+        android:text="Dommages reçus"
+        app:layout_constraintEnd_toStartOf="@+id/damages_from_win"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="132dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginTop="21dp"
+        android:fontFamily="@font/permanent_marker"
+        android:text="Dommages infligés"
+        app:layout_constraintEnd_toStartOf="@+id/damages_to_win"
+        app:layout_constraintTop_toBottomOf="@+id/loss_name" />
+
+    <TextView
+        android:id="@+id/heal_win"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/permanent_marker"
+        android:text="17"
+        app:layout_constraintStart_toEndOf="@+id/TXt"
+        app:layout_constraintTop_toBottomOf="@+id/damages_from_loss" />
+
+    <TextView
+        android:id="@+id/damages_from_loss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/permanent_marker"
+        android:text="17"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/damages_to_loss" />
+
+    <TextView
+        android:id="@+id/TXt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/permanent_marker"
+        android:text="Soins"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/permanent_marker"
+        android:text="Dommages reçus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+
+    <ImageView
+        android:id="@+id/loss_pic"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <ImageView
+        android:id="@+id/win_pic"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <TextView
+        android:id="@+id/win_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/permanent_marker"
+        android:text="Winner : Nom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/win_pic" />
+
+
+    <TextView
+        android:id="@+id/loss_name"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/permanent_marker"
+        android:text="Looser : Nom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loss_pic" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="23dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="21dp"
+        android:fontFamily="@font/permanent_marker"
+        android:text="Dommages infligés"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/win_name" />
+
+    <TextView
+        android:id="@+id/damages_to_loss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/permanent_marker"
+        android:text="17"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/win_name" />
+
+    <Button
+        android:id="@+id/button_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="8dp"
+        android:background="#700104"
+        android:text="Play again"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_leave_game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="200dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#700104"
+        android:text="LEAVE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_start"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/thanks"
+        android:layout_width="389dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="68dp"
+        android:text="Thank you for playing our game. We hope you have enjoyed it. See you soon !"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>
