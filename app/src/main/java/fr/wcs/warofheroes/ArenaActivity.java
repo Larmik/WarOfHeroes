@@ -1,5 +1,6 @@
 package fr.wcs.warofheroes;
 
+import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -48,6 +49,8 @@ public class ArenaActivity extends AppCompatActivity {
         final Button attack2 = findViewById(R.id.button_attack_2);
         final Button spell2 = findViewById(R.id.button_spell_2);
         final Button heal2 = findViewById(R.id.button_heal_2);
+        final TextView ko = findViewById(R.id.is_ko);
+
         Glide.with(this).load(hero1Parcel.getImage()).into(imgHero1);
         Glide.with(this).load(hero2Parcel.getImage()).into(imgHero2);
 
@@ -108,6 +111,7 @@ public class ArenaActivity extends AppCompatActivity {
                 spell2.setVisibility(View.VISIBLE);
                 heal2.setVisibility(View.VISIBLE);
 
+
                 hero2.setLife(hero2.getLife() - attackValue);
                 health2.setSecondaryProgress(100);
                 health2.setProgress(hero2.getLife());
@@ -115,6 +119,28 @@ public class ArenaActivity extends AppCompatActivity {
                 hero1.setMana(hero1.getMana() + mana);
                 manaHero1.setSecondaryProgress(50);
                 manaHero1.setProgress(hero1.getMana());
+
+                if (hero2.isKo()){
+                    attack1.setVisibility(View.INVISIBLE);
+                    spell1.setVisibility(View.INVISIBLE);
+                    heal1.setVisibility(View.INVISIBLE);
+                    attack2.setVisibility(View.INVISIBLE);
+                    spell2.setVisibility(View.INVISIBLE);
+                    heal2.setVisibility(View.INVISIBLE);
+                    hero2.setLife(0);
+                    ko.setText("Player 1 Wins !");
+                    ko.setVisibility(View.VISIBLE);
+                    imgHero2.setVisibility(View.INVISIBLE);
+                    new Handler().postDelayed(new Runnable(){
+                        @Override
+                        public void run() {
+
+                            Intent intent = new Intent(ArenaActivity.this, ResumeFightActivity.class);
+                            startActivity(intent);
+                        }
+                    }, 3000);
+                }
+
             }
         });
 
@@ -176,6 +202,7 @@ public class ArenaActivity extends AppCompatActivity {
                 spell2.setVisibility(View.VISIBLE);
                 heal2.setVisibility(View.VISIBLE);
 
+
                 hero2.setLife(hero2.getLife() - spellHealValue);
                 health2.setSecondaryProgress(100);
                 health2.setProgress(hero2.getLife());
@@ -183,6 +210,29 @@ public class ArenaActivity extends AppCompatActivity {
                 hero1.setMana(hero1.getMana() - 50);
                 manaHero1.setSecondaryProgress(50);
                 manaHero1.setProgress(hero1.getMana());
+
+                if (hero2.isKo()) {
+                    attack1.setVisibility(View.INVISIBLE);
+                    spell1.setVisibility(View.INVISIBLE);
+                    heal1.setVisibility(View.INVISIBLE);
+                    attack2.setVisibility(View.INVISIBLE);
+                    spell2.setVisibility(View.INVISIBLE);
+                    heal2.setVisibility(View.INVISIBLE);
+                    hero2.setLife(0);
+                    ko.setText("Player 1 Wins !");
+                    ko.setVisibility(View.VISIBLE);
+                    imgHero2.setVisibility(View.INVISIBLE);
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            Intent intent = new Intent(ArenaActivity.this, ResumeFightActivity.class);
+                            startActivity(intent);
+                        }
+
+                    }, 3000);
+                }
+
             }
         });
 
@@ -292,6 +342,7 @@ public class ArenaActivity extends AppCompatActivity {
                 spell2.setVisibility(View.INVISIBLE);
                 heal2.setVisibility(View.INVISIBLE);
 
+
                 hero1.setLife(hero1.getLife() - attackValue);
                 health1.setSecondaryProgress(100);
                 health1.setProgress(hero1.getLife());
@@ -299,6 +350,29 @@ public class ArenaActivity extends AppCompatActivity {
                 hero2.setMana(hero2.getMana() + mana);
                 //manaHero2.setSecondaryProgress(50);
                 manaHero2.setProgress(hero2.getMana()*2);
+
+                if (hero1.isKo()) {
+                    attack1.setVisibility(View.INVISIBLE);
+                    spell1.setVisibility(View.INVISIBLE);
+                    heal1.setVisibility(View.INVISIBLE);
+                    attack2.setVisibility(View.INVISIBLE);
+                    spell2.setVisibility(View.INVISIBLE);
+                    heal2.setVisibility(View.INVISIBLE);
+                    hero1.setLife(0);
+                    ko.setText("Player 2 Wins !");
+                    ko.setVisibility(View.VISIBLE);
+                    imgHero1.setVisibility(View.INVISIBLE);
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            Intent intent = new Intent(ArenaActivity.this, ResumeFightActivity.class);
+                            startActivity(intent);
+                        }
+
+                    }, 3000);
+                }
+
             }
         });
 
@@ -360,6 +434,7 @@ public class ArenaActivity extends AppCompatActivity {
                 spell2.setVisibility(View.INVISIBLE);
                 heal2.setVisibility(View.INVISIBLE);
 
+
                 hero1.setLife(hero1.getLife() - spellHealValue);
                 health1.setSecondaryProgress(100);
                 health1.setProgress(hero1.getLife());
@@ -367,6 +442,28 @@ public class ArenaActivity extends AppCompatActivity {
                 hero2.setMana(hero2.getMana() - 50);
                 manaHero2.setSecondaryProgress(100);
                 manaHero2.setProgress(hero2.getMana());
+
+                if (hero1.isKo()) {
+                    attack1.setVisibility(View.INVISIBLE);
+                    spell1.setVisibility(View.INVISIBLE);
+                    heal1.setVisibility(View.INVISIBLE);
+                    attack2.setVisibility(View.INVISIBLE);
+                    spell2.setVisibility(View.INVISIBLE);
+                    heal2.setVisibility(View.INVISIBLE);
+                    hero1.setLife(0);
+                    ko.setText("Player 2 Wins !");
+                    ko.setVisibility(View.VISIBLE);
+                    imgHero1.setVisibility(View.INVISIBLE);
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            Intent intent = new Intent(ArenaActivity.this, ResumeFightActivity.class);
+                            startActivity(intent);
+                        }
+
+                    }, 3000);
+                }
             }
         });
 
