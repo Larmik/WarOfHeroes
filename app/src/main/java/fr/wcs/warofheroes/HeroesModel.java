@@ -13,6 +13,16 @@ public class HeroesModel implements Parcelable {
     private int combat;
     private String description;
     private String image;
+    private int life;
+    private int damage;
+    private int mana;
+
+    public HeroesModel(int life, int damage, int mana) {
+        this.life = life;
+        this.damage = damage;
+        this.mana = mana;
+
+    }
 
 
     public HeroesModel(String name, int intelligence, int strength, int speed, int durability,
@@ -141,6 +151,42 @@ public class HeroesModel implements Parcelable {
         parcel.writeInt(combat);
         parcel.writeString(description);
         parcel.writeString(image);
+    }
+
+    public void takeHit() {
+        this.life = life - damage;
+    }
+
+    public boolean isKo(){
+        if (life<= 0){
+            return true;
+
+        }
+        return false;
+    }
+
+    public int getLife() {
+        return life;
+    }
+
+    public void setLife(int life) {
+        this.life = life;
+    }
+
+    public int getDamage() {
+        return damage;
+    }
+
+    public void setDamage(int damage) {
+        this.damage = damage;
+    }
+
+    public int getMana() {
+        return mana;
+    }
+
+    public void setMana(int mana) {
+        this.mana = mana;
     }
 }
 

@@ -72,7 +72,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/button_spell"
+        android:id="@+id/button_spell_1"
         android:fontFamily="@font/permanent_marker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -80,32 +80,32 @@
         android:layout_marginStart="32dp"
         android:text="@string/spell"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button_attack"
+        app:layout_constraintStart_toEndOf="@+id/button_attack_1"
         android:background="@color/colorButton" />
 
     <Button
-        android:id="@+id/button_attack"
-        android:fontFamily="@font/permanent_marker"
+        android:id="@+id/button_attack_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginStart="180dp"
+        android:background="@color/colorButton"
+        android:fontFamily="@font/permanent_marker"
         android:text="@string/attack"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:background="@color/colorButton" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button_heal"
-        android:fontFamily="@font/permanent_marker"
+        android:id="@+id/button_heal_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginStart="32dp"
+        android:background="@color/colorButton"
+        android:fontFamily="@font/permanent_marker"
         android:text="@string/heal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button_spell"
-        android:background="@color/colorButton" />
+        app:layout_constraintStart_toEndOf="@+id/button_spell_1" />
 
     <TextView
         android:id="@+id/textView_player_one"
@@ -164,6 +164,46 @@
         app:layout_constraintTop_toBottomOf="@+id/progressBarHero2"
         app:layout_constraintVertical_bias="0.39"
         app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <TextView
+        android:id="@+id/life_pl_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="100"
+        app:layout_constraintStart_toEndOf="@+id/progressBarHero1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/life_pl_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="100"
+        app:layout_constraintEnd_toStartOf="@+id/progressBarHero3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mana_pl_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        app:layout_constraintStart_toEndOf="@+id/progressBarHero2"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarHero1" />
+
+    <TextView
+        android:id="@+id/mana_pl_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        app:layout_constraintEnd_toStartOf="@+id/progressBarHero4"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarHero3" />
 
 </android.support.constraint.ConstraintLayout>
 
