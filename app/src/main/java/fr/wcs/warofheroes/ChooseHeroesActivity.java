@@ -33,8 +33,9 @@ public class ChooseHeroesActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_heroes);
-        final Intent gotoSplashVs = new Intent(ChooseHeroesActivity.this, VsActivity.class);
+        Intent recupResumeActivity = getIntent();
 
+        final Intent gotoSplashVs = new Intent(ChooseHeroesActivity.this, VsActivity.class);
         final ArrayList<HeroesModel> heroList = new ArrayList<>();
         final ImageView imgHero = findViewById(R.id.img_hero);
         final TextView intelligence = findViewById(R.id.intelligence_value);

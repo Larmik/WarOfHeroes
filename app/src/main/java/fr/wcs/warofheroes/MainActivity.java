@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Intent recupFightActivity = getIntent();
         ImageView ivLogo = findViewById(R.id.image_glide);
         String url = "https://vignette.wikia.nocookie.net/soulcalibur/images/0/0d/051.jpg/revision/latest?cb=20120112143431";
         Glide.with(this).load(url) .into(ivLogo);
