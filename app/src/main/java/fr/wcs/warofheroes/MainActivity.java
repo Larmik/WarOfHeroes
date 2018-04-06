@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         Glide.with(this).load(url) .into(ivLogo);
 
         Button buttonVersus = findViewById(R.id.button_versus);
-        Button buttonTraining = findViewById(R.id.button_training);
+
 
         buttonVersus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,13 +32,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         
-        buttonTraining.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                
-                Intent intentTraining = new Intent(MainActivity.this, ChooseHeroesActivity.class);
-                startActivity(intentTraining);
-            }
-        });
+
     }
 }

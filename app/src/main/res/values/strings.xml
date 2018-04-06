@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">War of Heroes</string>
     <string name="entrainement">Entrainement</string>
-    <string name="combat_1vs1">Combat 1vs1</string>
+    <string name="combat_1vs1">Fight 1 vs 1</string>
     <string name="war_of_heroes">War of Heroes</string>
     <string name="splash">War of Heroes</string>
     <string name="attack">Attack</string>
@@ -11,4 +11,6 @@
     <string name="playertwo">Player two, ready ?</string>
     <string name="ready">Ready ?</string>
     <string name="fight">Fight !</string>
+    <string name="fight_1vs1">Let's Start Fighting !!</string>
+    <string name="let_s_start_fighting">Let\'s Start Fighting !!</string>
 </resources>
