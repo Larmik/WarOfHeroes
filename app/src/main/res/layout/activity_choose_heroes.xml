@@ -36,6 +36,7 @@
 
     <TextView
         android:id="@+id/name_hero"
+        android:fontFamily="@font/permanent_marker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -50,6 +51,7 @@
 
     <TextView
         android:id="@+id/intelligence"
+        android:fontFamily="@font/permanent_marker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -61,6 +63,7 @@
 
     <TextView
         android:id="@+id/strength"
+        android:fontFamily="@font/permanent_marker"
         android:layout_width="72dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -72,6 +75,7 @@
 
     <TextView
         android:id="@+id/speed"
+        android:fontFamily="@font/permanent_marker"
         android:layout_width="72dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -83,6 +87,7 @@
 
     <TextView
         android:id="@+id/durability"
+        android:fontFamily="@font/permanent_marker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -94,6 +99,7 @@
 
     <TextView
         android:id="@+id/power"
+        android:fontFamily="@font/permanent_marker"
         android:layout_width="57dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -105,6 +111,7 @@
 
     <TextView
         android:id="@+id/combat"
+        android:fontFamily="@font/permanent_marker"
         android:layout_width="57dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -116,6 +123,7 @@
 
     <TextView
         android:id="@+id/intelligence_value"
+        android:fontFamily="@font/permanent_marker"
         android:layout_width="40dp"
         android:layout_height="19dp"
         android:layout_marginStart="8dp"
@@ -127,6 +135,7 @@
 
     <TextView
         android:id="@+id/strength_value"
+        android:fontFamily="@font/permanent_marker"
         android:layout_width="40dp"
         android:layout_height="20dp"
         android:layout_marginStart="8dp"
@@ -138,6 +147,7 @@
 
     <TextView
         android:id="@+id/speed_value"
+        android:fontFamily="@font/permanent_marker"
         android:layout_width="40dp"
         android:layout_height="18dp"
         android:layout_marginStart="8dp"
@@ -149,6 +159,7 @@
 
     <TextView
         android:id="@+id/durability_value"
+        android:fontFamily="@font/permanent_marker"
         android:layout_width="40dp"
         android:layout_height="19dp"
         android:layout_marginStart="8dp"
@@ -160,6 +171,7 @@
 
     <TextView
         android:id="@+id/power_value"
+        android:fontFamily="@font/permanent_marker"
         android:layout_width="40dp"
         android:layout_height="18dp"
         android:layout_marginStart="8dp"
@@ -171,6 +183,7 @@
 
     <TextView
         android:id="@+id/combat_value"
+        android:fontFamily="@font/permanent_marker"
         android:layout_width="40dp"
         android:layout_height="19dp"
         android:layout_marginStart="8dp"
@@ -188,6 +201,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/permanent_marker"
         android:text="TextView"
         android:textSize="18sp"
         android:visibility="gone"
@@ -205,6 +219,7 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:text="Ready Player 1"
+        android:fontFamily="@font/permanent_marker"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -217,6 +232,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/permanent_marker"
         android:text="Please choose your Hero"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -233,6 +249,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
+        android:fontFamily="@font/permanent_marker"
         android:text="Player 1"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"

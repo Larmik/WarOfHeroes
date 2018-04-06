@@ -73,6 +73,7 @@
 
     <Button
         android:id="@+id/button_spell"
+        android:fontFamily="@font/permanent_marker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -84,6 +85,7 @@
 
     <Button
         android:id="@+id/button_attack"
+        android:fontFamily="@font/permanent_marker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -95,6 +97,7 @@
 
     <Button
         android:id="@+id/button_heal"
+        android:fontFamily="@font/permanent_marker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -106,6 +109,7 @@
 
     <TextView
         android:id="@+id/textView_player_one"
+        android:fontFamily="@font/permanent_marker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="200dp"
@@ -120,6 +124,7 @@
 
     <TextView
         android:id="@+id/textView_player_two"
+        android:fontFamily="@font/permanent_marker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="200dp"
@@ -134,6 +139,7 @@
 
     <TextView
         android:id="@+id/textView_fight"
+        android:fontFamily="@font/permanent_marker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="200dp"
