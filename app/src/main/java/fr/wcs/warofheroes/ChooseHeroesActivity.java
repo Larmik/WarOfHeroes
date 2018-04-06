@@ -217,11 +217,8 @@ public class ChooseHeroesActivity extends FragmentActivity {
                                 btnGo.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View view) {
-                                        Intent intent = new Intent(ChooseHeroesActivity.this, ArenaActivity.class);
                                         gotoSplashVs.putExtra(EXTRA_PARCEL_HERO1, hero1);
                                         gotoSplashVs.putExtra(EXTRA_PARCEL_HERO2, hero2);
-                                        intent.putExtra(EXTRA_PARCEL_HERO1, hero1);
-                                        intent.putExtra(EXTRA_PARCEL_HERO2, hero2);
                                         ChooseHeroesActivity.this.startActivity(gotoSplashVs);
                                     }
                                 });
