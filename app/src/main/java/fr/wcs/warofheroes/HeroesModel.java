@@ -1,12 +1,6 @@
 package fr.wcs.warofheroes;
-
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.graphics.drawable.Drawable;
 import android.os.Parcel;
 import android.os.Parcelable;
-
-import java.util.List;
 
 public class HeroesModel implements Parcelable {
 

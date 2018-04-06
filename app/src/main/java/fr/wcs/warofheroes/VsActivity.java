@@ -19,8 +19,8 @@ public class VsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vs);
-        HeroesModel hero1Choose = getIntent().getParcelableExtra(EXTRA_PARCEL_HERO1);
-        HeroesModel hero2Choose = getIntent().getParcelableExtra(EXTRA_PARCEL_HERO2);
+        final HeroesModel hero1Choose = getIntent().getParcelableExtra(EXTRA_PARCEL_HERO1);
+        final HeroesModel hero2Choose = getIntent().getParcelableExtra(EXTRA_PARCEL_HERO2);
 
 
         final ImageView hero1Img = findViewById(R.id.img_hero1);
@@ -41,6 +41,8 @@ public class VsActivity extends AppCompatActivity {
             public void run() {
 
                 Intent mainIntent = new Intent(VsActivity.this, ArenaActivity.class);
+                mainIntent.putExtra(EXTRA_PARCEL_HERO1, hero1Choose);
+                mainIntent.putExtra(EXTRA_PARCEL_HERO2, hero2Choose);
                 VsActivity.this.startActivity(mainIntent);
                 VsActivity.this.finish();
             }
