@@ -33,7 +33,6 @@ public class ChooseHeroesActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_heroes);
-        Intent recupResumeActivity = getIntent();
 
         final Intent gotoSplashVs = new Intent(ChooseHeroesActivity.this, VsActivity.class);
         final ArrayList<HeroesModel> heroList = new ArrayList<>();
@@ -66,7 +65,6 @@ public class ChooseHeroesActivity extends FragmentActivity {
 
                     @Override
                     public void onResponse(JSONArray response) {
-                        // TODO : traiter la réponse
                         try {
 
                             for (int i = 0; i < 30; i++) {

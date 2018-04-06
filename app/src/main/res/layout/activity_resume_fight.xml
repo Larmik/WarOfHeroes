@@ -15,64 +15,62 @@
         android:fontFamily="@font/permanent_marker"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView13"
-        tools:text="17" />
+        android:text="17" />
 
     <TextView
         android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="21dp"
         android:fontFamily="@font/permanent_marker"
+        android:text="17"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView50"
-        tools:text="17" />
+        app:layout_constraintTop_toBottomOf="@+id/textView50" />
 
     <TextView
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginTop="24dp"
         android:fontFamily="@font/permanent_marker"
+        android:text="17"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.893"
-        app:layout_constraintStart_toEndOf="@+id/textView11"
-        app:layout_constraintTop_toBottomOf="@+id/textView15"
-        tools:text="17" />
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="43dp"
+        android:layout_width="132dp"
         android:layout_height="19dp"
-        android:layout_marginEnd="156dp"
+        android:layout_marginEnd="72dp"
         android:layout_marginTop="24dp"
         android:fontFamily="@font/permanent_marker"
+        android:text="Soins"
         app:layout_constraintEnd_toStartOf="@+id/textView16"
-        app:layout_constraintTop_toBottomOf="@+id/textView11"
-        tools:text="Soins" />
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <TextView
         android:id="@+id/textView11"
-        android:layout_width="wrap_content"
+        android:layout_width="132dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="72dp"
         android:layout_marginTop="24dp"
         android:fontFamily="@font/permanent_marker"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        tools:layout_editor_absoluteX="362dp"
-        tools:text="Dommages reçus" />
+        android:text="Dommages reçus"
+        app:layout_constraintEnd_toStartOf="@+id/textView13"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <TextView
         android:id="@+id/textView4"
-        android:fontFamily="@font/permanent_marker"
-        android:layout_width="wrap_content"
+        android:layout_width="132dp"
         android:layout_height="22dp"
         android:layout_marginEnd="72dp"
         android:layout_marginTop="21dp"
+        android:fontFamily="@font/permanent_marker"
+        android:text="Dommages infligés"
         app:layout_constraintEnd_toStartOf="@+id/textView15"
-        app:layout_constraintTop_toBottomOf="@+id/textView50"
-        tools:text="Dommages infligés" />
+        app:layout_constraintTop_toBottomOf="@+id/textView50" />
 
     <TextView
         android:id="@+id/textView10"
@@ -83,7 +81,7 @@
         android:fontFamily="@font/permanent_marker"
         app:layout_constraintStart_toEndOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/textView9"
-        tools:text="17" />
+        android:text="17" />
 
     <TextView
         android:id="@+id/textView9"
@@ -94,7 +92,7 @@
         android:fontFamily="@font/permanent_marker"
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/textView8"
-        tools:text="17" />
+        android:text="17" />
 
     <TextView
         android:id="@+id/textView7"
@@ -105,7 +103,7 @@
         android:fontFamily="@font/permanent_marker"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
-        tools:text="Soins" />
+        android:text="Soins" />
 
     <TextView
         android:id="@+id/textView6"
@@ -116,7 +114,7 @@
         android:fontFamily="@font/permanent_marker"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
-        tools:text="Dommages reçus" />
+        android:text="Dommages reçus" />
 
 
 
@@ -149,7 +147,7 @@
         android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        tools:text="Winner : Nom" />
+        android:text="Winner : Nom" />
 
 
     <TextView
@@ -161,7 +159,7 @@
         android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView6"
-        tools:text="Looser : Nom" />
+        android:text="Looser : Nom" />
 
     <TextView
         android:id="@+id/textView5"
@@ -172,7 +170,7 @@
         android:layout_marginTop="21dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        tools:text="Dommages infligés" />
+        android:text="Dommages infligés" />
 
     <TextView
         android:id="@+id/textView8"
@@ -183,7 +181,7 @@
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toEndOf="@+id/textView5"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        tools:text="17" />
+        android:text="17" />
 
     <Button
         android:id="@+id/button_start"
@@ -191,6 +189,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:layout_marginStart="44dp"
+        android:background="#700104"
         android:text="Play again"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -201,6 +200,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="44dp"
+        android:background="#700104"
         android:text="LEAVE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

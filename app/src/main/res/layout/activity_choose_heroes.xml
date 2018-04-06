@@ -218,6 +218,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
+        android:background="#700104"
         android:text="Ready Player 1"
         android:fontFamily="@font/permanent_marker"
         android:visibility="gone"

@@ -30,6 +30,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="248dp"
+        android:background="#700104"
         android:fontFamily="@font/permanent_marker"
         android:text="@string/let_s_start_fighting"
         android:textSize="24sp"

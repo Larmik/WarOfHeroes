@@ -1,5 +1,6 @@
 package fr.wcs.warofheroes;
 
+import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -45,6 +46,8 @@ public class ArenaActivity extends AppCompatActivity {
         final Button attack2 = findViewById(R.id.button_attack_2);
         final Button spell2 = findViewById(R.id.button_spell_2);
         final Button heal2 = findViewById(R.id.button_heal_2);
+        final TextView ko = findViewById(R.id.is_ko);
+
         Glide.with(this).load(hero1Parcel.getImage()).into(imgHero1);
         Glide.with(this).load(hero2Parcel.getImage()).into(imgHero2);
 
@@ -106,6 +109,26 @@ public class ArenaActivity extends AppCompatActivity {
                 attack2.setVisibility(View.VISIBLE);
                 spell2.setVisibility(View.VISIBLE);
                 heal2.setVisibility(View.VISIBLE);
+                if (hero2.isKo()){
+                    attack1.setVisibility(View.INVISIBLE);
+                    spell1.setVisibility(View.INVISIBLE);
+                    heal1.setVisibility(View.INVISIBLE);
+                    attack2.setVisibility(View.INVISIBLE);
+                    spell2.setVisibility(View.INVISIBLE);
+                    heal2.setVisibility(View.INVISIBLE);
+                    hero2.setLife(0);
+                    ko.setText("Player 1 Wins !");
+                    ko.setVisibility(View.VISIBLE);
+                    imgHero2.setVisibility(View.INVISIBLE);
+                    new Handler().postDelayed(new Runnable(){
+                        @Override
+                        public void run() {
+
+                            Intent intent = new Intent(ArenaActivity.this, ResumeFightActivity.class);
+                            startActivity(intent);
+                        }
+                    }, 3000);
+                }
             }
         });
 
@@ -166,6 +189,27 @@ public class ArenaActivity extends AppCompatActivity {
                 attack2.setVisibility(View.VISIBLE);
                 spell2.setVisibility(View.VISIBLE);
                 heal2.setVisibility(View.VISIBLE);
+                if (hero2.isKo()) {
+                    attack1.setVisibility(View.INVISIBLE);
+                    spell1.setVisibility(View.INVISIBLE);
+                    heal1.setVisibility(View.INVISIBLE);
+                    attack2.setVisibility(View.INVISIBLE);
+                    spell2.setVisibility(View.INVISIBLE);
+                    heal2.setVisibility(View.INVISIBLE);
+                    hero2.setLife(0);
+                    ko.setText("Player 1 Wins !");
+                    ko.setVisibility(View.VISIBLE);
+                    imgHero2.setVisibility(View.INVISIBLE);
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            Intent intent = new Intent(ArenaActivity.this, ResumeFightActivity.class);
+                            startActivity(intent);
+                        }
+
+                    }, 3000);
+                }
             }
         });
 
@@ -266,6 +310,27 @@ public class ArenaActivity extends AppCompatActivity {
                 attack2.setVisibility(View.INVISIBLE);
                 spell2.setVisibility(View.INVISIBLE);
                 heal2.setVisibility(View.INVISIBLE);
+                if (hero1.isKo()) {
+                    attack1.setVisibility(View.INVISIBLE);
+                    spell1.setVisibility(View.INVISIBLE);
+                    heal1.setVisibility(View.INVISIBLE);
+                    attack2.setVisibility(View.INVISIBLE);
+                    spell2.setVisibility(View.INVISIBLE);
+                    heal2.setVisibility(View.INVISIBLE);
+                    hero1.setLife(0);
+                    ko.setText("Player 2 Wins !");
+                    ko.setVisibility(View.VISIBLE);
+                    imgHero1.setVisibility(View.INVISIBLE);
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            Intent intent = new Intent(ArenaActivity.this, ResumeFightActivity.class);
+                            startActivity(intent);
+                        }
+
+                    }, 3000);
+                }
             }
         });
 
@@ -326,6 +391,27 @@ public class ArenaActivity extends AppCompatActivity {
                 attack2.setVisibility(View.INVISIBLE);
                 spell2.setVisibility(View.INVISIBLE);
                 heal2.setVisibility(View.INVISIBLE);
+                if (hero1.isKo()) {
+                    attack1.setVisibility(View.INVISIBLE);
+                    spell1.setVisibility(View.INVISIBLE);
+                    heal1.setVisibility(View.INVISIBLE);
+                    attack2.setVisibility(View.INVISIBLE);
+                    spell2.setVisibility(View.INVISIBLE);
+                    heal2.setVisibility(View.INVISIBLE);
+                    hero1.setLife(0);
+                    ko.setText("Player 2 Wins !");
+                    ko.setVisibility(View.VISIBLE);
+                    imgHero1.setVisibility(View.INVISIBLE);
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            Intent intent = new Intent(ArenaActivity.this, ResumeFightActivity.class);
+                            startActivity(intent);
+                        }
+
+                    }, 3000);
+                }
             }
         });
 
