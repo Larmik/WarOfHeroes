@@ -7,4 +7,8 @@
     <string name="attack">Attack</string>
     <string name="heal">Heal</string>
     <string name="spell">Spell</string>
+    <string name="playerone">Player one, ready ?</string>
+    <string name="playertwo">Player two, ready ?</string>
+    <string name="ready">Ready ?</string>
+    <string name="fight">Fight !</string>
 </resources>
