@@ -49,6 +49,9 @@ public class HeroesModel implements Parcelable {
         combat = in.readInt();
         description = in.readString();
         image = in.readString();
+        life = in.readInt();
+        damage = in.readInt();
+        mana = in.readInt();
     }
 
     public static final Creator<HeroesModel> CREATOR = new Creator<HeroesModel>() {
@@ -135,27 +138,7 @@ public class HeroesModel implements Parcelable {
         this.image = image;
     }
 
-    @Override
-    public int describeContents() {
-        return 0;
-    }
 
-    @Override
-    public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(name);
-        parcel.writeInt(intelligence);
-        parcel.writeInt(strength);
-        parcel.writeInt(speed);
-        parcel.writeInt(durability);
-        parcel.writeInt(power);
-        parcel.writeInt(combat);
-        parcel.writeString(description);
-        parcel.writeString(image);
-    }
-
-    public void takeHit() {
-        this.life = life - damage;
-    }
 
     public boolean isKo(){
         if (life<= 0){
@@ -187,6 +170,27 @@ public class HeroesModel implements Parcelable {
 
     public void setMana(int mana) {
         this.mana = mana;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(name);
+        parcel.writeInt(intelligence);
+        parcel.writeInt(strength);
+        parcel.writeInt(speed);
+        parcel.writeInt(durability);
+        parcel.writeInt(power);
+        parcel.writeInt(combat);
+        parcel.writeString(description);
+        parcel.writeString(image);
+        parcel.writeInt(life);
+        parcel.writeInt(damage);
+        parcel.writeInt(mana);
     }
 }
 

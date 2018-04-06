@@ -12,12 +12,12 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="28dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBarHero4"
-        app:layout_constraintVertical_bias="0.256"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarHero3"
+        app:layout_constraintVertical_bias="0.328"
         app:srcCompat="@mipmap/ic_launcher_round" />
 
     <ProgressBar
@@ -27,25 +27,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
+        android:progressDrawable="@drawable/progressbar"
+        android:max="100"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/progressbar"
-        android:max="100"/>
-
-    <ProgressBar
-        android:id="@+id/progressBarHero2"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/progressmanabar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBarHero1"
-        app:layout_constraintVertical_bias="0.0"
-        android:max="50"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ProgressBar
         android:id="@+id/progressBarHero3"
@@ -54,26 +39,11 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/progressbar"
+        android:progressDrawable="@drawable/progressbar"
+        android:max="100"
         android:rotation="180"
-        android:max="100"/>
-
-    <ProgressBar
-        android:id="@+id/progressBarHero4"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/progressmanabar"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBarHero3"
-        app:layout_constraintVertical_bias="0.0"
-        android:max="50"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button_spell_1"
@@ -83,9 +53,9 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="8dp"
         android:background="@color/colorButton"
+        android:enabled="false"
         android:fontFamily="@font/permanent_marker"
         android:text="@string/spell"
-        android:enabled="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button_attack_1"
         app:layout_constraintTop_toBottomOf="@+id/textView_fight" />
@@ -103,17 +73,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_fight" />
-  
+
     <Button
         android:id="@+id/button_heal_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:enabled="false"
         android:layout_marginBottom="16dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="8dp"
-
         android:background="@color/colorButton"
+
+        android:enabled="false"
         android:fontFamily="@font/permanent_marker"
         android:text="@string/heal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -129,8 +99,8 @@
         android:layout_marginBottom="16dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="8dp"
-        android:enabled="false"
         android:background="@color/colorButton"
+        android:enabled="false"
         android:fontFamily="@font/permanent_marker"
         android:text="@string/spell"
         android:visibility="invisible"
@@ -142,13 +112,13 @@
         android:id="@+id/button_attack_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="invisible"
         android:layout_marginBottom="16dp"
         android:layout_marginStart="140dp"
         android:layout_marginTop="8dp"
         android:background="@color/colorButton"
         android:fontFamily="@font/permanent_marker"
         android:text="@string/attack"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_fight" />
@@ -157,25 +127,26 @@
         android:id="@+id/button_heal_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="invisible"
         android:layout_marginBottom="16dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="8dp"
         android:background="@color/colorButton"
+        android:enabled="false"
         android:fontFamily="@font/permanent_marker"
         android:text="@string/heal"
-        android:enabled="false"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button_spell_2"
         app:layout_constraintTop_toBottomOf="@+id/textView_fight" />
+
     <TextView
         android:id="@+id/textView_player_one"
-        android:fontFamily="@font/permanent_marker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="200dp"
         android:layout_marginStart="200dp"
         android:layout_marginTop="150dp"
+        android:fontFamily="@font/permanent_marker"
         android:text="@string/playerone"
         android:textSize="40sp"
         android:visibility="invisible"
@@ -185,12 +156,12 @@
 
     <TextView
         android:id="@+id/textView_player_two"
-        android:fontFamily="@font/permanent_marker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="200dp"
         android:layout_marginStart="200dp"
         android:layout_marginTop="150dp"
+        android:fontFamily="@font/permanent_marker"
         android:text="@string/playertwo"
         android:textSize="40sp"
         android:visibility="invisible"
@@ -200,12 +171,12 @@
 
     <TextView
         android:id="@+id/textView_fight"
-        android:fontFamily="@font/permanent_marker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="200dp"
         android:layout_marginStart="200dp"
         android:layout_marginTop="150dp"
+        android:fontFamily="@font/permanent_marker"
         android:text="@string/fight"
         android:textSize="40sp"
         android:visibility="invisible"
@@ -218,53 +189,13 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBarHero2"
-        app:layout_constraintVertical_bias="0.256"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarHero1"
+        app:layout_constraintVertical_bias="0.328"
         app:srcCompat="@mipmap/ic_launcher_round" />
-
-    <TextView
-        android:id="@+id/life_pl_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="100"
-        app:layout_constraintStart_toEndOf="@+id/progressBarHero1"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/life_pl_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        android:text="100"
-        app:layout_constraintEnd_toStartOf="@+id/progressBarHero3"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/mana_pl_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="0"
-        app:layout_constraintStart_toEndOf="@+id/progressBarHero2"
-        app:layout_constraintTop_toBottomOf="@+id/progressBarHero1" />
-
-    <TextView
-        android:id="@+id/mana_pl_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        android:text="0"
-        app:layout_constraintEnd_toStartOf="@+id/progressBarHero4"
-        app:layout_constraintTop_toBottomOf="@+id/progressBarHero3" />
 
     <TextView
         android:id="@+id/is_ko"
@@ -273,12 +204,39 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:fontFamily="@font/permanent_marker"
         android:text="TextView"
         android:textSize="30sp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/textView_fight"
         app:layout_constraintEnd_toStartOf="@+id/imageView_hero2"
         app:layout_constraintStart_toEndOf="@+id/imageView_hero1" />
+
+    <TextView
+        android:id="@+id/msg_mana_1"
+        android:layout_width="wrap_content"
+        android:layout_height="23dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Special capacities available !"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarHero1" />
+
+    <TextView
+        android:id="@+id/msg_mana_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Special capacities available !"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarHero3" />
 
 </android.support.constraint.ConstraintLayout>
 
