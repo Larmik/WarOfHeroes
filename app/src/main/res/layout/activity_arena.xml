@@ -73,6 +73,8 @@
 
     <Button
         android:id="@+id/button_spell_1"
+
+        android:fontFamily="@font/permanent_marker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
@@ -84,11 +86,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button_attack_1"
         app:layout_constraintTop_toBottomOf="@+id/textView_fight" />
+        android:background="@color/colorButton" />
+
 
     <Button
         android:id="@+id/button_attack_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:layout_marginBottom="16dp"
         android:layout_marginStart="140dp"
         android:layout_marginTop="8dp"
@@ -98,20 +103,24 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_fight" />
-
+  
     <Button
         android:id="@+id/button_heal_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:layout_marginBottom="16dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="8dp"
+
         android:background="@color/colorButton"
         android:fontFamily="@font/permanent_marker"
         android:text="@string/heal"
         app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintStart_toEndOf="@+id/button_spell_1"
         app:layout_constraintTop_toBottomOf="@+id/textView_fight" />
+
 
     <Button
         android:id="@+id/button_spell_2"
@@ -211,6 +220,46 @@
         app:layout_constraintTop_toBottomOf="@+id/progressBarHero2"
         app:layout_constraintVertical_bias="0.256"
         app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <TextView
+        android:id="@+id/life_pl_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="100"
+        app:layout_constraintStart_toEndOf="@+id/progressBarHero1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/life_pl_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="100"
+        app:layout_constraintEnd_toStartOf="@+id/progressBarHero3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mana_pl_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        app:layout_constraintStart_toEndOf="@+id/progressBarHero2"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarHero1" />
+
+    <TextView
+        android:id="@+id/mana_pl_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        app:layout_constraintEnd_toStartOf="@+id/progressBarHero4"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarHero3" />
 
 </android.support.constraint.ConstraintLayout>
 
