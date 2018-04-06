@@ -18,7 +18,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progressBarHero4"
-        app:layout_constraintVertical_bias="0.307"
+        app:layout_constraintVertical_bias="0.256"
         app:srcCompat="@mipmap/ic_launcher_round" />
 
     <ProgressBar
@@ -73,8 +73,6 @@
 
     <Button
         android:id="@+id/button_spell_1"
-
-        android:fontFamily="@font/permanent_marker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
@@ -83,17 +81,15 @@
         android:background="@color/colorButton"
         android:fontFamily="@font/permanent_marker"
         android:text="@string/spell"
+        android:enabled="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button_attack_1"
         app:layout_constraintTop_toBottomOf="@+id/textView_fight" />
-        android:background="@color/colorButton" />
-
 
     <Button
         android:id="@+id/button_attack_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:layout_marginBottom="16dp"
         android:layout_marginStart="140dp"
         android:layout_marginTop="8dp"
@@ -108,7 +104,7 @@
         android:id="@+id/button_heal_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
+        android:enabled="false"
         android:layout_marginBottom="16dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="8dp"
@@ -129,9 +125,11 @@
         android:layout_marginBottom="16dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="8dp"
+        android:enabled="false"
         android:background="@color/colorButton"
         android:fontFamily="@font/permanent_marker"
         android:text="@string/spell"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button_attack_2"
         app:layout_constraintTop_toBottomOf="@+id/textView_fight" />
@@ -140,6 +138,7 @@
         android:id="@+id/button_attack_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:visibility="invisible"
         android:layout_marginBottom="16dp"
         android:layout_marginStart="140dp"
         android:layout_marginTop="8dp"
@@ -154,12 +153,14 @@
         android:id="@+id/button_heal_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:visibility="invisible"
         android:layout_marginBottom="16dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="8dp"
         android:background="@color/colorButton"
         android:fontFamily="@font/permanent_marker"
         android:text="@string/heal"
+        android:enabled="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button_spell_2"
         app:layout_constraintTop_toBottomOf="@+id/textView_fight" />
